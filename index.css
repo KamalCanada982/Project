@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Search and Sort Styles */
+.search-sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.search-sort input,
+.search-sort select,
+.search-sort button {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    height: 40px; /* Ensure consistent height */
+}
+
+.search-sort input,
+.search-sort select {
+    flex-grow: 1;
+}
+
+.search-sort button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 120px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 40px; /* Same height as input and select */
+}
+
+.search-sort input:focus,
+.search-sort select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.search-sort button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.search-sort input:focus,
+.search-sort select:focus,
+.search-sort button:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+}
+
+
+
+/* Book List Styles */
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.book-cover {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(135deg, #8e7e68, #d4c1a2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Georgia', serif;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    text-decoration: none;
+}
+
+.book-cover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #6f5945, #b8a68d);
+}
+
+.book-cover h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.book-cover p {
+    font-size: 1.1rem;
+}
+
+.book-cover small {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer p {
+    margin-top: 10px;
+}
