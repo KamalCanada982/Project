@@ -63,6 +63,10 @@ $user_id = $_SESSION['user_id'] ?? null;
     </header>
 
     <div class="book-details">
+    <?php if (!empty($book['image'])): ?>
+        <p><strong>Book Image:</strong></p>
+        <img src="uploads/<?= htmlspecialchars($book['image']) ?>" alt="Image of <?= htmlspecialchars($book['title']) ?>" style="max-width: 100%; height: auto;">
+    <?php endif; ?>
         <p><strong>Author:</strong> <?= htmlspecialchars($book['author']) ?></p>
         <p><strong>Publication Year:</strong> <?= htmlspecialchars($book['publication_year']) ?></p>
         <p><strong>Price:</strong> $<?= htmlspecialchars($book['price']) ?></p>
