@@ -74,25 +74,27 @@ $userStmt->execute([':user_search' => "%$userSearch%"]);
         </div>
 
         <!-- Books Table -->
-        <table class="admin-table">
-            <thead>
-                <tr><th>Title</th><th>Author</th><th>Year</th><th>Price</th><th>Actions</th></tr>
-            </thead>
-            <tbody>
-                <?php while ($book = $bookStmt->fetch()): ?>
-                    <tr>
-                        <td><?= htmlspecialchars($book['title']) ?></td>
-                        <td><?= htmlspecialchars($book['author']) ?></td>
-                        <td><?= htmlspecialchars($book['publication_year']) ?></td>
-                        <td><?= htmlspecialchars($book['price']) ?></td>
-                        <td>
-                            <a href="edit_book.php?book_id=<?= $book['book_id'] ?>" class="action-link">Edit</a> | 
-                            <a href="delete_book.php?book_id=<?= $book['book_id'] ?>" class="action-link" onclick="return confirm('Are you sure you want to delete this book?')">Delete</a>
-                        </td>
-                    </tr>
-                <?php endwhile; ?>
-            </tbody>
-        </table>
+<table class="admin-table">
+    <thead>
+        <tr><th>Title</th><th>Author</th><th>Year</th><th>Price</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+        <?php while ($book = $bookStmt->fetch()): ?>
+            <tr>
+                <td><?= htmlspecialchars($book['title']) ?></td>
+                <td><?= htmlspecialchars($book['author']) ?></td>
+                <td><?= htmlspecialchars($book['publication_year']) ?></td>
+                <td><?= htmlspecialchars($book['price']) ?></td>
+                <td>
+                    <a href="view_book.php?book_id=<?= $book['book_id'] ?>" class="action-link">View</a> |
+                    <a href="edit_book.php?book_id=<?= $book['book_id'] ?>" class="action-link">Edit</a> | 
+                    <a href="delete_book.php?book_id=<?= $book['book_id'] ?>" class="action-link" onclick="return confirm('Are you sure you want to delete this book?')">Delete</a>
+                </td>
+            </tr>
+        <?php endwhile; ?>
+    </tbody>
+</table>
+
     </section>
 
     <!-- Manage Users Section -->
