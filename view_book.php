@@ -84,7 +84,7 @@ $user_id = $_SESSION['user_id'] ?? null;
                     <?php if ($is_admin): ?>
                         <form method="POST" action="delete_comment.php" style="display:inline;">
                             <input type="hidden" name="comment_id" value="<?= $comment['comment_id'] ?>">
-                            <button type="submit" style="color:white; cursor:pointer;">Delete</button>
+                            <button type="submit" style="color:white; cursor:pointer;" onclick="return confirm('Are you sure you want to delete this comment? This action cannot be undone.')">Delete</button>
                         </form>
                     <?php endif; ?>
                 </div>
