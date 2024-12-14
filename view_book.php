@@ -70,7 +70,6 @@ $user_id = $_SESSION['user_id'] ?? null;
         <p><strong>Author:</strong> <?= htmlspecialchars($book['author']) ?></p>
         <p><strong>Publication Year:</strong> <?= htmlspecialchars($book['publication_year']) ?></p>
         <p><strong>Price:</strong> $<?= htmlspecialchars($book['price']) ?></p>
-        <p><strong>Description:</strong> <?= htmlspecialchars($book['description'] ?? 'No description available.') ?></p>
         <a href="index.php">Back to Book List</a>
     </div>
 
